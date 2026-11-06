@@ -1,0 +1,7 @@
+(set-logic QF_AUFLIA)
+(declare-const a (Array Int Int))
+(declare-const i Int)
+(assert (= (select (store a i 5) 3) 7))
+(assert (not (= i 3)))
+(check-sat)
+(get-model)

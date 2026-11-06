@@ -1,0 +1,8 @@
+(set-logic QF_SLIA)
+(declare-const s String)
+(declare-const t String)
+(assert (= (str.++ s "ab" t) "xabyabz"))
+(assert (> (str.len s) 0))
+(assert (str.in_re t (re.+ (re.range "a" "z"))))
+(check-sat)
+(get-value (s t))

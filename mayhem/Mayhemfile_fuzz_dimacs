@@ -1,0 +1,9 @@
+project: savantenvs/z3
+target: fuzz_dimacs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dimacs/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dimacs
+    libfuzzer: true
+    timeout: 10
