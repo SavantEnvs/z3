@@ -1,0 +1,9 @@
+project: savantenvs/z3
+target: fuzz_tactic
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tactic/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tactic
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,8 @@
+	(declare-const x Int)
+(push)
+(assert (> x 0))
+(check-sat)
+(pop)
+(assert (< x 0))
+(check-sat)
+(get-model)

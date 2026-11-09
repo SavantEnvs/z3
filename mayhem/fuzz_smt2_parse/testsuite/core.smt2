@@ -1,0 +1,8 @@
+(set-option :produce-unsat-cores true)
+(declare-const p Bool)
+(declare-const q Bool)
+(assert (! (or p q) :named a1))
+(assert (! (not p) :named a2))
+(assert (! (not q) :named a3))
+(check-sat)
+(get-unsat-core)

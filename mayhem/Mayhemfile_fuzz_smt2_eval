@@ -1,0 +1,9 @@
+project: savantenvs/z3
+target: fuzz_smt2_eval
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_smt2_eval/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_smt2_eval
+    libfuzzer: true
+    timeout: 10

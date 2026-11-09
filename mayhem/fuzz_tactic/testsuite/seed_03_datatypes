@@ -1,0 +1,6 @@
+(declare-datatypes ((List 0)) (((nil) (cons (hd Int) (tl List)))))
+(declare-const l List)
+(assert (= (hd l) 4))
+(assert (is-cons (tl l)))
+(check-sat)
+(get-value (l))

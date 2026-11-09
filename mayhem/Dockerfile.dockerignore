@@ -1,0 +1,8 @@
+# Upstream's root .dockerignore drops .git; the commit image must carry the full history (SPEC §6.2 item 2).
+# Only local build trees and editor noise are excluded.
+build/
+build-fuzz/
+build-test/
+*.swp
+*~
+.DS_Store

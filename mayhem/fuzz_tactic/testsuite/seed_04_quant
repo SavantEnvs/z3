@@ -1,0 +1,5 @@
+(set-logic UFLIA)
+(declare-fun f (Int) Int)
+(assert (forall ((x Int)) (! (> (f x) x) :pattern ((f x)))))
+(assert (< (f 3) 3))
+(check-sat)
